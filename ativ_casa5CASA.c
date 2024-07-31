@@ -1,3 +1,9 @@
+   //Escreva um algoritmo em C que receba o salï¿½rio de um funcionï¿½rio e o cargo de seu cï¿½digo.
+    //De acordo com seu cï¿½digo, informe quanto de aumento ele teve e o valor atual de seu salï¿½rio.
+    //A tabela a seguir apresenta os cargos e seus respectivos aumentos: //
+
+
+
 #include <stdio.h>
 #include <string.h>
 
@@ -6,14 +12,14 @@ int main() {
     float salario, aumento, novoSalario, porcentagem;
     
 
-    printf("Digite o código do cargo do funcionário (1-4):\n");
+    printf("Digite o cÃ³digo do cargo do funcionÃ¡rio (1-4):\n");
     printf("1 - Desenvolvedor Java\n");
     printf("2 - Analista de Redes\n");
     printf("3 - Arquiteto DevOps\n");
-    printf("4 - Técnico de Suporte\n");
+    printf("4 - TÃ©cnico de Suporte\n");
     scanf("%d", &codigo);
 
-    printf("Digite o salário atual do funcionário: R$ ");
+    printf("Digite o salÃ¡rio atual do funcionÃ¡rio: R$ ");
     scanf("%f", &salario);
 
   
@@ -35,20 +41,20 @@ int main() {
             novoSalario = porcentagem + salario;
             break;
         case 4:
-            printf("Cargo: Técnico de Suporte\n");
+            printf("Cargo: TÃ©cnico de Suporte\n");
             porcentagem = salario *0.13;
             novoSalario = porcentagem + salario;
             break;
         default:
-            printf("Código de cargo inválido.\n");
+            printf("CÃ³digo de cargo invÃ¡lido.\n");
             return 1;
     }
 
-    // Saída formatada:
+    // SaÃ­da formatada:
    
-    printf("Salário atual: R$%.2f\n", salario);
+    printf("SalÃ¡rio atual: R$%.2f\n", salario);
     printf("Aumento: R$%.2f\n", porcentagem);
-    printf("Novo salário: R$%.2f\n", novoSalario);
+    printf("Novo salÃ¡rio: R$%.2f\n", novoSalario);
 
     return 0;
 }
