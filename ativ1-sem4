@@ -1,0 +1,37 @@
+//Escreva um programa que receba e armazene 5 numeros inteiros em um vetor.
+//O programa deverá ordenar esses numeros emordem crescente.
+//E depois, escreve-los na tela.
+
+
+
+#include <stdio.h>
+
+int main() {
+    int numeros[5], i, j, aux;
+
+    // Lendo os números
+    printf("Digite 5 números inteiros:\n");
+    for (i = 0; i < 5; i++) {
+        scanf("%d", &numeros[i]);
+    }
+
+    // Ordenando os números 
+    for (i = 0; i < 4; i++) {
+        for (j = 0; j < 4 - i; j++) {
+            if (numeros[j] > numeros[j + 1]) {
+                aux = numeros[j];
+                numeros[j] = numeros[j + 1];
+                numeros[j + 1] = aux;
+            }
+        }
+    }
+
+    // Imprimindo os números ordenados
+    printf("Números ordenados em ordem crescente:\n");
+    for (i = 0; i < 5; i++) {
+        printf("%d ", numeros[i]);
+    }
+    printf("\n");
+
+    return 0;
+}
